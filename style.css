@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&display=swap');
+
+:root {
+    --bodyFont: 'Raleway', sans-serif;
+    --colorNav: #000033;
+    --colorHeader: #4d4d00;
+    --colorWhite: #fff;
+    --gray: #a3a375;
+    --transition: .3 ease;
+    --padding: 50px 0;
+    --font: 16px;
+
+}
+
+/******************
+basic styles
+******************/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--bodyFont);
+    font-size: var(--font);
+    letter-spacing: 1.5px;
+    line-height: 1.5;
+
+}
+
+button {
+    background: var(--colorHeader);
+    ;
+    border: none;
+    padding: 10px 25px;
+    font-size: .8rem;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+button:hover {
+
+    background: var(--colorWhite);
+    cursor: pointer;
+    transition: var(transition);
+
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    transition: var(--transition);
+    cursor: pointer;
+    color: var(--gray);
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+/******************
+nav
+******************/
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--colorNav);
+    align-items: center;
+    padding: 10px 50px;
+}
+
+nav .logo {
+    color: var(--colorWhite);
+    font-weight: 600;
+    font-size: 3rem;
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul li a {
+    color: var(--colorWhite);
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-right: 30px;
+
+}
+
+/******************
+header
+******************/
+
+.header {
+    background-color: var(--colorHeader);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    color: var(--colorWhite);
+}
+
+.header hgroup {
+    margin-top: 100px;
+}
+
+.header hgroup h1 {
+    font-size: 2.7rem;
+    font-weight: 600;
+}
+
+.header hgroup h3 {
+    font-size: 1.3rem;
+    font-weight: 400;
+    padding: 10px 0 10px;
+}
+
+.header hgroup p {
+    font-size: .8rem;
+    font-weight: 300;
+}
+
+/******************
+about
+******************/
+.about {
+    padding: var(--padding);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about article {
+    flex: 0 0 31%;
+    border: 1px solid var(--colorHeader);
+    padding: 10px;
+    background: var(--gray);
+}
+
+.about article p {
+    font-size: .9rem;
+    margin: 10px 0;
+}
+
+/******************
+cont
+******************/
+
+.cont img {
+    width: 100%;
+}
+
+.cont {
+    padding: var(--padding);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+.cont article {
+    flex: 0 0 48%;
+
+}
+
+.cont article:last-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cont article h1 {
+    font-weight: 600;
+
+}
+
+.cont article h4 {
+    margin: 10px 0;
+
+}
+
+.cont article p {
+    font-size: .9rem;
+}
+
+/******************
+works
+******************/
+
+.works {
+    padding: var(--padding);
+    background-color: #f5f5f0;
+}
+
+.works img {
+    width: 100%;
+}
+
+.works h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.works .row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.works .row article {
+    flex: 0 0 24%;
+}
+
+.works .row article p {
+    text-align: center;
+    text-transform: capitalize;
+    color: var(--colorNav);
+    font-style: italic;
+}
+
+
+/******************
+footer
+******************/
+
+
+footer {
+    background: var(--colorNav);
+    color: var(--colorWhite);
+    padding: var(--padding);
+}
+
+footer h2 {
+    text-align: center;
+    margin-bottom: 20px
+}
+
+footer .col {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+footer article {
+    flex: 0 0 30%;
+}
+
+footer i {
+    font-size: 1.5rem;
+
+}
+
+footer p {
+    text-align: center;
+    font-size: .8rem;
+    color: var(--gray);
+    margin-top: 20px;
+    text-decoration-line: overline underline;
+
+}
+
+@media(max-width: 768px) {
+
+
+    nav {
+
+        flex-direction: column;
+        padding: 10px 30px;
+    }
+
+    nav .logo {
+        font-size: 2rem;
+    }
+
+    nav ul li a {
+        font-weight: 400;
+        font-size: .9rem;
+
+    }
+
+    .header {
+
+        text-align: center;
+    }
+
+    .about article {
+        flex: 0 0 100%;
+        padding: 20px;
+        margin-top: 20px;
+    }
+
+    .cont article {
+        flex: 0 0 100%;
+
+    }
+
+    .cont article:last-child {
+        margin-top: 20px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
